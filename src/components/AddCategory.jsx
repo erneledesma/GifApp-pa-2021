@@ -13,7 +13,12 @@ export const AddCategory = ({setCategorias}) => {
     // funcion del submit cuando haga enter del Form
     const handleSubmit = (e) => {
         e.preventDefault()
-        setCategorias( cats => [...cats, inputValue])
+
+        if (inputValue.trim().length > 2) {
+            setCategorias( cats => [inputValue, ...cats ])
+            setInputValue('')
+
+        }
     }
 
     return (

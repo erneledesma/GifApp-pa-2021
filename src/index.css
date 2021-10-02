@@ -30,3 +30,10 @@ input {
 .card img {
   max-width: 170px;
 }
+
+.card p {
+  padding: 5px;
+  text-align: center;
+}
+
+
